@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class SimpleSpamDetector {
+public class SimpleSpamDetector implements SpamDetector{
 
 
     private List<String> spamWords = new ArrayList<String>();
