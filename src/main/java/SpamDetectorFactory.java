@@ -15,7 +15,12 @@ public class SpamDetectorFactory {
 //get from local spam checker
         if (args.length <= 2) {
             //Build list of spam words.
-            String filename = args[1];
+            System.out.println("Here! -->" + args[0]);
+            //System.out.println("Here! -->" + args[1]);
+            String filename = null;
+            if (args.length==2){
+                filename = args[1];
+            };
             List<String> spamWords = new ArrayList<String>();
             if (filename != null && filename != "") {
                 spamWords = Files.readAllLines(Paths.get(filename));
